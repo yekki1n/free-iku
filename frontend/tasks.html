@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tasks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="tasks">
+  <div id="top-nav"></div>
+  <h1>Tasks</h1>
+  <div id="loading"></div>
+  <div id="error" class="error"></div>
+
+  <form id="filter-form">
+    <fieldset>
+      <legend>Filters</legend>
+      <p>
+        <label for="filter-project-id">Project ID</label><br />
+        <input type="text" id="filter-project-id" />
+      </p>
+      <p>
+        <label for="filter-status">Status</label><br />
+        <select id="filter-status">
+          <option value="">(none)</option>
+          <option value="TODO">TODO</option>
+          <option value="IN_PROGRESS">IN_PROGRESS</option>
+          <option value="DONE">DONE</option>
+        </select>
+      </p>
+      <p>
+        <label for="filter-user-id">User ID</label><br />
+        <input type="text" id="filter-user-id" />
+      </p>
+      <p>
+        <button type="submit">Apply</button>
+      </p>
+    </fieldset>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Project</th>
+        <th>Assigned User</th>
+        <th>Status</th>
+        <th>Deadline</th>
+        <th>Update Status</th>
+      </tr>
+    </thead>
+    <tbody id="tasks-body"></tbody>
+  </table>
+
+  <fieldset>
+    <legend>Create Task</legend>
+    <form id="create-task-form">
+      <p>
+        <label for="create-task-title">Title</label><br />
+        <input type="text" id="create-task-title" required />
+      </p>
+      <p>
+        <label for="create-task-description">Description</label><br />
+        <input type="text" id="create-task-description" />
+      </p>
+      <p>
+        <label for="create-task-deadline">Deadline</label><br />
+        <input type="date" id="create-task-deadline" />
+      </p>
+      <p>
+        <label for="create-task-project">Project ID</label><br />
+        <input type="text" id="create-task-project" required />
+      </p>
+      <p>
+        <button type="submit">Create</button>
+      </p>
+    </form>
+  </fieldset>
+
+  <fieldset>
+    <legend>Assign Task</legend>
+    <form id="assign-task-form">
+      <p>
+        <label for="assign-task-id">Task ID</label><br />
+        <input type="text" id="assign-task-id" required />
+      </p>
+      <p>
+        <label for="assign-task-user">User ID</label><br />
+        <input type="text" id="assign-task-user" required />
+      </p>
+      <p>
+        <button type="submit">Assign</button>
+      </p>
+    </form>
+  </fieldset>
+
+  <hr />
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <div id="top-nav"></div>
+  <h1>Dashboard</h1>
+  <div id="loading"></div>
+  <div id="error" class="error"></div>
+
+  <h2 id="welcome"></h2>
+
+  <table>
+    <tr>
+      <th>Total Users</th>
+      <th>Total Projects</th>
+      <th>Total Tasks</th>
+    </tr>
+    <tr>
+      <td id="total-users">0</td>
+      <td id="total-projects">0</td>
+      <td id="total-tasks">0</td>
+    </tr>
+  </table>
+
+  <hr />
+
+  <h2>My Tasks</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Task Title</th>
+        <th>Project</th>
+        <th>Status</th>
+        <th>Deadline</th>
+      </tr>
+    </thead>
+    <tbody id="my-tasks-body"></tbody>
+  </table>
+
+  <hr />
+
+  <script src="app.js"></script>
+</body>
+</html>
