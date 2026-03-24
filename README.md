@@ -47,3 +47,5 @@ Seed runs on first API start if the database is empty. All seeded users share pa
   - Update task status
 
 All endpoints require authentication except `/api/auth/*`.
+
+[Try more API test](./api-test.md)
